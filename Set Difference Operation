@@ -1,0 +1,6 @@
+eng_count = int(input())
+eng_subs = set(int(x) for x in input().split())
+french_count = int(input())
+french_subs = set(int(x) for x in input().split())
+only_eng = eng_subs.difference(french_subs)
+print(len(only_eng))
