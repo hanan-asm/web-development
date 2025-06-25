@@ -1,0 +1,6 @@
+eng_count = int(input())
+eng_subs = set(int(x) for x in input().split())
+french_count = int(input())
+french_subs = set(int(x) for x in input().split())
+total_subs = eng_subs.union(french_subs)
+print(len(total_subs))
