@@ -1,0 +1,21 @@
+n, m = input().split()
+n = int(n)
+m = int(m)
+groupA = []
+for i in range(n):
+    groupA.append(input())
+groupB = []
+for j in range(m):
+    groupB.append(input())
+index = {}
+for k in range(n):
+    word = groupA[k]
+    if word in index:
+        index[word].append(k + 1)  
+    else:
+        index[word] = [k + 1]
+for word in groupB:
+    if word in index:
+        print(' '.join(str(idx) for idx in index[word]))
+    else:
+        print(-1)
